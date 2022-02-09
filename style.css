@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: var(--Pale-blue) url(images/pattern-background-desktop.svg) no-repeat;
+    background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: var(--Pale-blue) url(images/pattern-background-mobile.svg) no-repeat;
+    background-size: 100%;
+  }
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  color: var(--Desaturated-blue);
+  line-height: 22px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  max-width: 350px;
+  background-color: white;
+  border-radius: 24px;
+  text-align: center;
+  padding-bottom: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
+}
+
+.content {
+  padding: 24px;
+}
+
+h1 {
+  margin: 12px 0;
+  font-weight: 700;
+}
+
+.song-info {
+  border-radius: 12px;
+  background-color: var(--Very-pale-blue);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.song-info > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.song-name {
+  font-weight: 700;
+}
+
+.song-price {
+  color: var(--Desaturated-blue);
+}
+
+.song-change {
+  color: var(--Bright-blue);
+  font-weight: 700;
+}
+
+.song-change:hover {
+  text-decoration: none;
+  color: hsla(245, 75%, 52%, 0.7);
+}
+
+.order-btn {
+  width: 100%;
+  background-color: var(--Bright-blue);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 24px 0;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 18px 13px hsla(245, 75%, 52%, 0.2);
+  border: none;
+  transition: 0.3s ease;
+}
+
+.order-btn:hover,
+.order-btn:active {
+  cursor: pointer;
+  background-color: hsla(245, 75%, 52%, 0.7);
+  box-shadow: 0 18px 13px hsla(245, 75%, 52%, 0.2);
+}
+
+.cancel-order {
+  color: var(--Desaturated-blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cancel-order:hover {
+  color: unset;
+}
